@@ -1,5 +1,5 @@
 # Features
-- AngularJs form validation for user inputs
+- Form validation for user inputs
 - Table sorting
 - Pagination
 - Data saved to Local Storage
