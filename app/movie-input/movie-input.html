@@ -1,0 +1,57 @@
+<form name="userInputs" novalidate>
+    <div class="input-elements clearfix">
+        <div class="col-md-4">
+            <div class="form-group form-group-lg">
+                <label for="">Movie ID</label>
+                <input type="number" class="form-control" id="" ng-model="movieId" ng-disabled="true" required>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group form-group-lg" ng-class="{'has-error' : userInputs.movie.$invalid && btnClicked}">
+                <label for="">Movie * </label>
+                <small ng-show="userInputs.movie.$invalid && btnClicked" class="text-danger"> This field is required</small>
+                <input type="text" name="movie" class="form-control" ng-model="movie" required>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group form-group-lg" ng-class="{'has-error' : userInputs.actor.$invalid && btnClicked}">
+                <label for="">Main Actor *</label>
+                <small ng-show="userInputs.actor.$invalid && btnClicked" class="text-danger"> This field is required</small>
+                <input type="text" name="actor" class="form-control" ng-model="actor" required>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group form-group-lg">
+                <label for="">Release Year</label>
+                <input type="number" class="form-control" ng-model="year">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group form-group-lg">
+                <label for="">Genre</label>
+                <select ng-model="genre" ng-options="opt.genreOption for opt in selectValues" class="form-control"></select>
+            </div>
+        </div>
+    </div><!-- End .input-elements -->
+    
+    <div class="row">
+        <div class="col-md-4 pull-right">
+            <div class="form-group">
+                <div class="col-md-7">
+                    <a href="" ng-click="clearInputs()" class="text-uppercase pull-right h4"><span class="text-primary"><strong>Cancel</strong></span></a>
+                </div>
+                <div class="col-md-5">
+                    <button ng-click="addToTable(userInputs.$valid)" class="btn btn-primary pull-right text-uppercase">Add To Table</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h5 ng-show="successMessage" class="text-success pull-right">A movie has been added to the Movies Overview!</h5>
+        </div>
+    </div><!-- End .row -->
+</form><!-- End Form -->

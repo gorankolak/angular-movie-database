@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Movie Database</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css'>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+        <link rel="stylesheet" href="app/app.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <ul class="list-unstyled list-inline text-primary">
+                            <li><a href="#/" class="h3 text-uppercase"><strong>New Movie</strong></a></li>
+                            <span class="h2">|</span>
+                            <li><a href="#/movie-display" class="h3 text-uppercase"><strong>Movies Overview</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <div ng-view></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dependencies -->
+        <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/ngstorage/ngstorage.min.js"></script>
+        <script src="/bower_components/Chart.js/Chart.min.js"></script>
+        <script src="/bower_components/angular-chart.js/dist/angular-chart.js"></script>
+        <script src="/bower_components/angular-utils-pagination/dirPagination.js"></script>
+
+        <!-- App Scripts -->
+        <script src="app/app.module.js"></script>
+        <script src="app/app.config.js"></script>
+        <script src="app/services/genres-counter.service.js"></script>
+        <script src="app/movie-input/movie-input.controller.js"></script>
+        <script src="app/movie-display/movie-display.controller.js"></script>
+    </body>
+</html>
