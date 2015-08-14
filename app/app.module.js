@@ -2,8 +2,8 @@
     'use strict';
     
     angular.module('app', [
-        'ngRoute', 
-        'ngStorage', 
+        'ngStorage',
+        'ngRoute',  
         'chart.js', 
         'angularUtils.directives.dirPagination'
     ]);
