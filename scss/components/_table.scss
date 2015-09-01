@@ -1,0 +1,12 @@
+/* Table Positioning 
+*********************/
+
+.table-responsive {
+    margin-bottom: 2em;
+    @include breakpoint(768) {
+        margin-bottom: 0;
+    }
+    @include breakpoint(992) {
+        margin-top: 2em;
+    }
+}

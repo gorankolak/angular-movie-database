@@ -4,7 +4,7 @@
     angular
         .module('app')
         .service('genresCounter', ['$localStorage', function($localStorage) {
-            
+
             this.sumOfGenres = function() {
                 var movies = $localStorage.movies;
                 var genreSum = $localStorage.genreSum;

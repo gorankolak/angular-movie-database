@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,700,400italic|Arvo:400,700);
 /* Base Styles 
 ***************/
 html {
@@ -7,13 +8,196 @@ body {
   background: #e3e3e3;
   font-family: "Open Sans", sans-serif; }
 
+.app-container {
+  min-height: 540px;
+  background-color: #fff;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 2em;
+  border-radius: 2px; }
+  @media (min-width: 62em) {
+    .app-container {
+      margin-top: 2em; } }
+  @media (min-width: 22.5em) {
+    .app-container {
+      min-height: 610px; } }
+  @media (min-width: 23.4375em) {
+    .app-container {
+      min-height: 640px; } }
+  @media (min-width: 30em) {
+    .app-container {
+      min-height: 760px; } }
+  @media (min-width: 64em) {
+    .app-container {
+      min-height: 720px; } }
+  @media (min-width: 105em) {
+    .app-container {
+      min-height: 805px; } }
+
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4,
 button, a {
   font-family: "Roboto", sans-serif; }
 
-.container {
-  padding-top: 3em; }
-
 th {
   cursor: pointer; }
+
+a:hover, a:focus {
+  text-decoration: none; }
+
+/* App Header 
+**************/
+@media (min-width: 62em) {
+  .header {
+    text-align: right; } }
+
+.logo {
+  text-align: center;
+  margin-bottom: 1em; }
+  @media (min-width: 48em) {
+    .logo {
+      text-align: left; } }
+  .logo a {
+    font-family: "Arvo", serif;
+    font-weight: bold;
+    font-size: 1.8em; }
+    .logo a:focus {
+      color: #337AB7; }
+    @media (min-width: 23.4375em) {
+      .logo a {
+        font-size: 2.3em; } }
+    @media (min-width: 62em) {
+      .logo a {
+        font-size: 3em; } }
+
+ul {
+  text-align: center; }
+  @media (min-width: 48em) {
+    ul {
+      text-align: right; } }
+  ul li {
+    border-bottom: 2px #fff solid; }
+    @media (min-width: 30em) {
+      ul li:not(:last-child) {
+        margin-right: 3em; } }
+    @media (min-width: 48em) {
+      ul li:not(:last-child) {
+        margin-right: 1em; } }
+    ul li:hover {
+      border-bottom: 2px #286090 solid; }
+    ul li:focus {
+      border-bottom: 2px #286090 solid; }
+
+.header ul {
+  border-bottom: 1px #e3e3e3 solid; }
+  .header ul li {
+    padding-top: 1em;
+    padding-bottom: 1em; }
+
+.active-li {
+  border-bottom: 2px #286090 solid; }
+
+/* Homepage Intro Text
+***********************/
+.app-intro {
+  text-align: center; }
+  @media (min-width: 40em) {
+    .app-intro {
+      margin-top: 2em; } }
+  @media (min-width: 48em) {
+    .app-intro {
+      margin-top: 4em; } }
+  .app-intro p {
+    text-transform: lowercase;
+    font-style: italic; }
+    @media (min-width: 23.4375em) {
+      .app-intro p {
+        font-size: 1.25em; } }
+    @media (min-width: 62em) {
+      .app-intro p {
+        font-size: 1.5em; } }
+    @media (min-width: 75em) {
+      .app-intro p {
+        font-size: 1.8em; } }
+  .app-intro span {
+    color: #337AB7;
+    font-weight: bold; }
+  .app-intro h1 {
+    margin-bottom: 0.5em; }
+
+.intro-title {
+  font-family: "Arvo", serif;
+  font-weight: bold;
+  font-size: 3em; }
+  @media (min-width: 23.4375em) {
+    .intro-title {
+      font-size: 3.7em; } }
+  @media (min-width: 62em) {
+    .intro-title {
+      font-size: 4.6em; } }
+  @media (min-width: 75em) {
+    .intro-title {
+      font-size: 5.75em; } }
+
+.info-box {
+  margin-top: 1em; }
+  @media (min-width: 48em) {
+    .info-box {
+      margin-top: 2em; } }
+
+.search-box {
+  margin-top: 2em; }
+  @media (min-width: 48em) {
+    .search-box {
+      margin-top: 2em; } }
+
+.search-label {
+  margin-top: 2em;
+  margin-bottom: 0.4em; }
+
+.search-result .h4 {
+  font-weight: bold;
+  margin-top: 0; }
+
+.search-add-btn {
+  margin-top: 0.5em; }
+
+.form-group-lg .form-control,
+.form-control,
+.btn {
+  border-radius: 2px; }
+
+.cancel-btn-wrap, .add-btn-wrap {
+  display: inline-block; }
+
+.add-btn-wrap {
+  margin-left: 1em; }
+
+.new-movie-buttons {
+  text-align: right; }
+
+.new-movie-inputs {
+  margin-top: 1em; }
+
+/* Charts Positioning 
+**********************/
+.charts {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+  @media (min-width: 40em) {
+    .charts {
+      margin-bottom: 4em; } }
+  @media (min-width: 62em) {
+    .charts {
+      margin-bottom: 2em; } }
+
+/* Table Positioning 
+*********************/
+.table-responsive {
+  margin-bottom: 2em; }
+  @media (min-width: 48em) {
+    .table-responsive {
+      margin-bottom: 0; } }
+  @media (min-width: 62em) {
+    .table-responsive {
+      margin-top: 2em; } }

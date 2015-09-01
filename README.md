@@ -1,4 +1,5 @@
 # Features
+- Searching movies in The Open Movie Database [OMDb API](http://www.omdbapi.com/)
 - Form validation for user inputs
 - Table sorting
 - Pagination

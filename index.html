@@ -5,10 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Movie Database</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Google Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css'>
-
+    
         <!-- Stylesheets -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
@@ -16,14 +13,25 @@
     </head>
     <body>
         <div class="container">
-            <div class="jumbotron">
-                <div class="col-md-12">
-                    <div class="page-header">
-                        <ul class="list-unstyled list-inline text-primary">
-                            <li><a href="#/" class="h3 text-uppercase"><strong>New Movie</strong></a></li>
-                            <span class="h2">|</span>
-                            <li><a href="#/movie-display" class="h3 text-uppercase"><strong>Movies Overview</strong></a></li>
-                        </ul>
+            <div class="app-container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="col-sm-3 col-md-2">
+                            <div class="logo">
+                                <a href="#/" ng-click="first=false; second=false; third=false">mdb</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 col-md-10">
+                            <div class="header">
+                                <ul class="list-unstyled list-inline text-primary">
+                                    <li ng-class="{'active-li': first}" ng-click="first=true; second=false; third=false"><a href="#/movie-search" class="text-uppercase"><strong>Search</strong></a></li>
+                                    <!-- <span class="h4">|</span> -->
+                                    <li ng-class="{'active-li': second}" ng-click="first=false; second=true; third=false"><a href="#/movie-input" class="text-uppercase"><strong>New</strong></a></li>
+                                    <!-- <span class="h4">|</span> -->
+                                    <li ng-class="{'active-li': third}" ng-click="first=false; second=false; third=true"><a href="#/movie-display" class="text-uppercase"><strong>My Movies</strong></a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             
@@ -40,6 +48,7 @@
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/ngstorage/ngStorage.min.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.min.js"></script>
         <script src="bower_components/Chart.js/Chart.min.js"></script>
         <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
         <script src="bower_components/angular-utils-pagination/dirPagination.js"></script>
@@ -48,6 +57,11 @@
         <script src="app/app.module.js"></script>
         <script src="app/app.config.js"></script>
         <script src="app/services/genres-counter.service.js"></script>
+        <script src="app/services/movieid-counter.service.js"></script>
+        <script src="app/services/data.service.js"></script>
+        <script src="app/services/movieapi.service.js"></script>
+        <script src="app/movie-home/movie-home.controller.js"></script>
+        <script src="app/movie-search/movie-search.controller.js"></script>
         <script src="app/movie-input/movie-input.controller.js"></script>
         <script src="app/movie-display/movie-display.controller.js"></script>
     </body>

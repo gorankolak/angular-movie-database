@@ -1,0 +1,6 @@
+.info-box {
+    margin-top: 1em;
+    @include breakpoint(768) {
+       margin-top: 2em; 
+    }
+}

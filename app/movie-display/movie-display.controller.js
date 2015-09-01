@@ -3,12 +3,14 @@
 
     angular
         .module('app')
-        .controller('movieDisplay', ['$scope', '$localStorage', 'genresCounter',
-            function($scope, $localStorage, genresCounter) {
+        .controller('movieDisplay', ['$scope', 'dataService', 'genresCounter',
+            function($scope, dataService, genresCounter) {
 
-                $scope.movies = $localStorage.movies;
-                $scope.genresSum = $localStorage.genreSum;
+                // Getting the data from local storage
+                $scope.movies = dataService.storage.movies;
+                $scope.genresSum = dataService.storage.genreSum;
 
+                // Deletes movies from local storage and from the table
                 $scope.removeMovie = function(index) {
                     $scope.movies.splice(index, 1);
                     $scope.moviesSum =  $scope.movies.length;
@@ -29,14 +31,15 @@
                     $scope.pieChartData = $scope.genresSumArray;
                 });
 
-                // Charts.js  
+                // Charts.js
                 $scope.graphChartLabels = ['Number of Movies in Total'];
                 $scope.graphChartData = [[$scope.moviesSum]];
                 $scope.pieChartLabels = ['Comedy', 'Drama', 'Horror', 'Action', 'Other'];
                 $scope.pieChartData = $scope.genresSumArray;
 
-                // Table sorting                
+                // Table sorting
                 $scope.sortParam = 'movieId';
+
                 $scope.sorting = function(sortParam) {
                     $scope.sortParam = sortParam;
                     $scope.reverseOrder = !$scope.reverseOrder;

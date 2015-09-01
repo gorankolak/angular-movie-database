@@ -1,0 +1,13 @@
+/* Charts Positioning 
+**********************/
+
+.charts {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    @include breakpoint(640) {
+        margin-bottom: 4em;
+    }
+    @include breakpoint(992) {
+        margin-bottom: 2em;
+    }
+}

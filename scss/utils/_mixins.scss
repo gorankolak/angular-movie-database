@@ -1,0 +1,11 @@
+// Breakpoints
+
+//base font
+$bf: 16;
+
+@mixin breakpoint($bp, $min-max: min-width) {
+    $em: $bp/$bf;
+    @media (#{$min-max}: #{$em}em) {
+        @content;
+    }
+}

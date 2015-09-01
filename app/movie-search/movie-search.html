@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <div class="info-box">
+                <p>Find movie in the Open Movie Database. After you get the search result, you can add it to your 'My Movies' database</p>
+            </div>
+
+            <div class="search-box">
+                <label>Search by movie title (keyword or full name):</label>
+                <div class="form-group">
+                    <input type="text" ng-model="keyword" class="form-control">
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group pull-right">
+                            <button ng-click="getMovieFromOMDb()" class="btn btn-primary btn-sm text-uppercase">Find Movie</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-result" ng-show="returnedResult">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p class="search-label">Title:</p>
+                        <p class="h4">{{title}}</p>
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="search-label">Director:</p>
+                        <p class="h4">{{director}}</p>
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="search-label">Year:</p>
+                        <p class="h4">{{year}}</p>
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="search-label">Genre:</p>
+                        <p class="h4">{{genre}}</p>
+                    </div>
+                </div>
+
+                <div class="row search-add-btn">
+                    <div class="col-xs-12">
+                        <div class="form-group pull-right">
+                            <button ng-click="addMovieToDatabase()" class="btn btn-primary btn-sm text-uppercase">Add to My Movies</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div ng-show="successMessage" class="text-success pull-right">A movie has been added to the My Movies!</div>
+        </div>
+    </div>
+</div>
+
+
+    

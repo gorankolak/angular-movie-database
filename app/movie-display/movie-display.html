@@ -1,44 +1,47 @@
 <div class="col-md-12">
     <div class="col-md-6">
-        <div class="page-header">
+        <div class="charts">
             <canvas id="bar" class="chart chart-bar" data="graphChartData"
           labels="graphChartLabels"></canvas>
         </div>
     </div>
 
     <div class="col-md-6">
-        <div class="page-header">
+        <div class="charts">
             <canvas id="pie" class="chart chart-pie" data="pieChartData" labels="pieChartLabels"></canvas>
         </div>
     </div>
 
     <div class="col-md-12">
-        <div class="page-header">
-            <div class="table-responsive">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th ng-click="sorting('movieId')">Movie ID</th>
-                            <th ng-click="sorting('movie')">Movie</th>
-                            <th ng-click="sorting('actor')">Actor</th>
-                            <th ng-click="sorting('year')">Release Year</th>
-                            <th ng-click="sorting('genre')">Genre</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr dir-paginate="movie in movies | orderBy:sortParam:reverseOrder | itemsPerPage:5">
-                            <td>{{movie.movieId}}</td>
-                            <td>{{movie.movie}}</td>
-                            <td>{{movie.actor}}</td>
-                            <td>{{movie.year}}</td>
-                            <td>{{movie.genre}}</td>
-                            <td><a href="" class="btn text-uppercase" ng-click="removeMovie($index)"><strong>Delete</strong></a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div><!-- End .table-responsive -->
-        
-            <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th ng-click="sorting('movieId')">Movie ID</th>
+                        <th ng-click="sorting('movie')">Movie</th>
+                        <th ng-click="sorting('director')">Director</th>
+                        <th ng-click="sorting('year')">Release Year</th>
+                        <th ng-click="sorting('genre')">Genre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr dir-paginate="movie in movies | orderBy:sortParam:reverseOrder | itemsPerPage:4">
+                        <td>{{movie.movieId}}</td>
+                        <td>{{movie.movie}}</td>
+                        <td>{{movie.director}}</td>
+                        <td>{{movie.year}}</td>
+                        <td>{{movie.genre}}</td>
+                        <td><a href="" class="btn text-uppercase" ng-click="removeMovie($index)"><strong>Delete</strong></a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </div><!-- End .col-md-12 -->
-</div><!-- End .col-md-12 -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="row">
+        <div class="col-xs-12">
+            <dir-pagination-controls max-size="4" direction-links="true" boundary-links="true"></dir-pagination-controls>
+        </div>
+    </div>
+</div>

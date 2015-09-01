@@ -1,0 +1,47 @@
+/* Homepage Intro Text
+***********************/
+
+.app-intro {
+    text-align: center;
+    @include breakpoint(640) {
+        margin-top: 2em;
+    }
+    @include breakpoint(768) {
+        margin-top: 4em;
+    }
+    p {
+        text-transform: lowercase;
+        font-style: italic;
+        @include breakpoint(375) {
+            font-size: 1.25em;
+        }
+        @include breakpoint(992) {
+            font-size: 1.5em;
+        }
+        @include breakpoint(1200) {
+            font-size: 1.8em;
+        }
+    }
+    span {
+        color: $blue;
+        font-weight: bold;
+    }
+    h1 {
+        margin-bottom: 0.5em;
+    }
+}
+
+.intro-title {
+    font-family: $logo-font;
+    font-weight: bold;
+    font-size: 3em;
+    @include breakpoint(375) {
+        font-size: 3.7em;
+    }
+    @include breakpoint(992) {
+        font-size: 4.6em;
+    }
+    @include breakpoint(1200) {
+        font-size: 5.75em;
+    }
+}
